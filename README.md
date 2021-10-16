@@ -1,70 +1,94 @@
-# Getting Started with Create React App
+# Technical challenge 📸
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A project created with React which cosumes the Unsplash API and allows to see different photos by categories, like latest ones, oldest ones or popular ones. The user can also search by custom keywords. With the following url you will be able to see the deployed project.
 
-## Available Scripts
 
-In the project directory, you can run:
+## Starting with the project 🚀
 
-### `yarn start`
+$ git clone https://github.com/EdwinLeal24/unsplash_challenge
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+$ cd unsplash_challenge 
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+$ yarn install (to install the dependencies) 
 
-### `yarn test`
+$ yarn run dev 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The project will be running in the localhost:3000
 
-### `yarn build`
+## Tools 🛠️
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The project is made with React. I have used React router dom to route into different pages and Axios to make the petition to the API.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Work tree 🖇️
+```
+src
+ src
+ ┣ components
+ ┃ ┣ Dialog
+ ┃ ┃ ┣ Dialog.jsx
+ ┃ ┃ ┗ Dialog.module.css
+ ┃ ┣ GridPhotos
+ ┃ ┃ ┣ GridPhotos.jsx
+ ┃ ┃ ┗ GridPhotos.module.css
+ ┃ ┣ Header
+ ┃ ┃ ┣ Header.jsx
+ ┃ ┃ ┗ Header.module.css
+ ┃ ┣ InfoProfile
+ ┃ ┃ ┣ InfoProfile.jsx
+ ┃ ┃ ┗ InfoProfile.module.css
+ ┃ ┣ PhotoCard
+ ┃ ┃ ┣ PhotoCard.js
+ ┃ ┃ ┗ PhotoCard.module.css
+ ┃ ┗ shared
+ ┃ ┃ ┣ ButtonPrimary.jsx
+ ┃ ┃ ┗ ButtonPrimary.module.css
+ ┣ context
+ ┃ ┣ AppContext.jsx
+ ┃ ┣ actions.js
+ ┃ ┣ appReducer.js
+ ┃ ┗ types.js
+ ┣ pages
+ ┃ ┣ home
+ ┃ ┃ ┣ Home.jsx
+ ┃ ┃ ┗ Home.module.css
+ ┃ ┣ notFound
+ ┃ ┃ ┗ 404.js
+ ┃ ┣ profile
+ ┃ ┃ ┣ Profile.jsx
+ ┃ ┃ ┗ Profile.module.css
+ ┃ ┣ views
+ ┃ ┃ ┗ index.js
+ ┃ ┣ App.css
+ ┃ ┗ App.js
+ ┣ routing
+ ┃ ┣ paths.js
+ ┃ ┗ router.js
+ ┣ services
+ ┃ ┣ api
+ ┃ ┃ ┣ api.js
+ ┃ ┃ ┗ httpManager.js
+ ┃ ┗ service.js
+ ┣ index.css
+ ┣ index.js
+ ┗ logo.svg
+ ```
+ 
+### Components
+In this folder can be found different components to build the app spliting into various subfolders with their styles.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Context
+The folder where I store all the state of the application. I have decided to use redux patrons in order to control the project easily when it gets bigger.
 
-### `yarn eject`
+### Pages
+Each file in the folder is a route of the project exept for index which is inside the view folder and is in charge of importing different components when needed. 
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Routing
+Here can be found the files which control the routes to simplify the generetion of the switch component when the app grows.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Services
+The folder where can be found the services used by application, for example calls to the API and axios instance. Any kind of petition to the data base, like get, post, or put will be handled from here. 
+ 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+ 
+ 
