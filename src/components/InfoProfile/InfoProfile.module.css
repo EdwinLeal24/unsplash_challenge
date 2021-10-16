@@ -1,0 +1,34 @@
+.profileInfo {
+  display: flex;
+  flex-direction: column;
+  min-width: 200px;
+  margin: 0 auto;
+}
+
+.avatar {
+  border-radius: 50%;
+  border: 1px solid #fd007d;
+}
+
+.info {
+  display: flex;
+  color: rgb(168, 167, 167);
+  margin-top: 15px;
+}
+
+.stat {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.data {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+h3 {
+  color: #fff;
+}

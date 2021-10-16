@@ -1,0 +1,33 @@
+.photoFrame {
+  max-height: 350px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 0 18px 25px rgb(175 174 174 / 10%);
+}
+img {
+  width: 100%;
+}
+.userSection {
+  display: flex;
+  position: absolute;
+  background-color: rgba(34, 33, 33, 0.616);
+  width: 100%;
+  color: #fff;
+  bottom: 0;
+  left: 0;
+}
+
+.avatarUser {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 7px;
+  margin: 10px;
+}
+
+.userName {
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+  font-size: 1rem;
+}
