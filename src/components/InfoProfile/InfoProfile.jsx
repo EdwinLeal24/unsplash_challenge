@@ -1,4 +1,5 @@
 import { useContext } from "react";
+import { useHistory } from "react-router";
 import { AppContext } from "../../context/AppContext";
 import {
   profileInfo,
@@ -7,6 +8,7 @@ import {
   stat,
   data,
 } from "./InfoProfile.module.css";
+import { HOME_PATH } from "../../routing/paths";
 
 export default function InfoProfile() {
   const { userProfile, isLoading } = useContext(AppContext);
@@ -18,6 +20,10 @@ export default function InfoProfile() {
     total_photos,
     name,
   } = userProfile;
+
+  const history = useHistory();
+
+  if (!userProfile) history.push(HOME_PATH);
 
   if (isLoading) return <h3>Loading user...</h3>;
   return (

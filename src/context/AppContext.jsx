@@ -36,7 +36,7 @@ export const AppProvider = ({ children }) => {
     const [errorUserPhoto, userPhotos] = await getUserPhotos(user);
     const [errorUser, userProfile] = await getUser(user);
 
-    if (errorUserPhoto)
+    if (errorUserPhoto || !user)
       dispatch(
         actions.getUserPhotosFailed(
           "An error has occurred when loading phothos"
@@ -44,7 +44,7 @@ export const AppProvider = ({ children }) => {
       );
     else dispatch(actions.getUserPhotosFinish(userPhotos));
 
-    if (errorUser)
+    if (errorUser || !user)
       dispatch(
         actions.getUserFailed("An error has occurred when loading the user")
       );
