@@ -1,0 +1,12 @@
+.profileContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.2rem;
+  margin-top: 20px;
+  padding: 30px;
+}
+
+.grid {
+  width: 70%;
+  flex-grow: 1;
+}
